@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MKB Chat – Responsive KI-App</title>
+  
+  <!-- Externe Ressourcen -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  
+  <!-- Eigene CSS-Datei -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <!-- KI-Slider -->
+    <div id="ki-slider">
+      <h2>KI-Auswahl</h2>
+      <button class="btn-mkr" id="btn-mkr"><i class="fa-solid fa-brain"></i> MKR</button>
+      <button class="btn-mkb" id="btn-mkb"><i class="fa-solid fa-image"></i> MKB</button>
+      <button class="btn-mkbplus" id="btn-mkbplus"><i class="fa-solid fa-images"></i> MKB+</button>
+      <button class="btn-mkplus" id="btn-mkplus"><i class="fa-solid fa-comments"></i> MK+</button>
+      <button class="btn-mk" id="btn-mk"><i class="fa-solid fa-robot"></i> MK</button>
+      <div class="suggestions">
+        <h3>Vorschläge</h3>
+        <button class="suggestion-button">Wie geht es dir?</button>
+        <button class="suggestion-button">Erzähl mir einen Witz!</button>
+        <button class="suggestion-button">Technologie?</button>
+        <button class="suggestion-button">Quantenphysik?</button>
+      </div>
+    </div>
+    
+    <!-- Header -->
+    <header>
+      <h1 id="header-title">MKB Chat</h1>
+      <p>Klicke auf „KI Auswahl", um ein Modell zu wählen</p>
+      <div class="header-buttons">
+        <button id="btn-ki-slider"><i class="fa-solid fa-bars"></i> KI Auswahl</button>
+        <button class="new-conversation" id="new-conversation"><i class="fa-solid fa-rotate"></i> Neue Konversation</button>
+        <button id="export-chat"><i class="fa-solid fa-download"></i> Chat speichern</button>
+      </div>
+      <div id="current-ki">Aktuelle KI: <span id="kiName">-</span></div>
+    </header>
+    
+    <!-- Chatbereich -->
+    <main class="chat-area" id="chat-area">
+      <div class="chat-container" id="chat-container"></div>
+      <div class="input-area">
+        <input type="text" class="input-field" id="user-input" placeholder="Gib deine Nachricht ein..." aria-label="Nachricht eingeben" />
+        <button id="send-button"><i class="fa-solid fa-paper-plane"></i> Senden</button>
+      </div>
+    </main>
+  </div>
+  
+  <!-- Eigene JavaScript-Datei -->
+  <script src="script.js"></script>
+</body>
+</html>
